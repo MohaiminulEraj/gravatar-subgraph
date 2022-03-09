@@ -1,0 +1,19 @@
+{
+  "name": "gravatar-subgraph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "graph codegen ./subgraph.yaml",
+    "build": "graph build ./subgraph.yaml",
+    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ mohaiminuleraj/gravatar ./subgraph.yaml --access-token"
+  },
+  "keywords": [],
+  "author": "Mohaiminul Eraj",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.27.0",
+    "@graphprotocol/graph-ts": "^0.25.0",
+    "typescript": "^4.6.2"
+  }
+}
