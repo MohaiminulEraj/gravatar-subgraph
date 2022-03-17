@@ -6,14 +6,19 @@
   "scripts": {
     "codegen": "graph codegen ./subgraph.yaml",
     "build": "graph build ./subgraph.yaml",
-    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ mohaiminuleraj/gravatar ./subgraph.yaml --access-token"
+    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ mohaiminuleraj/gravatar ./subgraph.yaml --access-token",
+    "create-local": "graph create --node http://localhost:8020/ mohaiminuleraj/gravatar-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ mohaiminuleraj/gravatar-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 mohaiminuleraj/gravatar-subgraph"
   },
   "keywords": [],
   "author": "Mohaiminul Eraj",
   "license": "MIT",
   "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.27.0",
-    "@graphprotocol/graph-ts": "^0.25.0",
+    "@graphprotocol/client-cli": "^0.0.2",
+    "@graphprotocol/graph-cli": "^0.28.0",
+    "@graphprotocol/graph-ts": "^0.26.0",
+    "truffle": "^5.0.4",
     "typescript": "^4.6.2"
   }
 }
